@@ -1,0 +1,17 @@
+<div class="container-fluid bg-dark">    
+    <mat-toolbar class="bg-dark text-white">
+        <span class="mr-3"><fa-icon style="color:green" class="fa-3x" [icon]="faVirus"></fa-icon></span>
+        <span> INDIA COVID-19</span>
+        <span class="ml-auto small">Last updated : {{lastUpdate}}</span>
+    </mat-toolbar>
+<div class="row">
+    <div class="col-6">
+        <app-dashboard [TotalCovidData]='TotalData'></app-dashboard>        
+        <app-table [AllStatesCovidData]='AllStatesData'></app-table>
+    </div>
+    <div class="col-6">  
+        <app-top5chart *ngIf='AllStatesData' [AllStatesCovidData]='AllStatesData' ></app-top5chart>      
+        <app-chart *ngIf='DailyStatesData' [StatesCovidData]='AllStatesData' [StatesDailyCovidData]='DailyStatesData'></app-chart>
+    </div>
+</div>
+</div>

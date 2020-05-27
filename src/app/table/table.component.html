@@ -1,0 +1,33 @@
+<div class="mat-elevation-z8 mt-1">
+  <mat-table  [dataSource]="dataSource">  
+    <!-- State Column -->
+    <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef>Name of State</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+    </ng-container>
+  
+    <!-- Active Column -->
+    <ng-container matColumnDef="confirmed">
+      <mat-header-cell *matHeaderCellDef> Confirmed </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.confirmed}} </mat-cell>
+    </ng-container>
+  
+    <!-- Recovered Column -->
+    <ng-container matColumnDef="recovered">
+      <mat-header-cell *matHeaderCellDef> Recovered</mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.recovered}} </mat-cell>
+    </ng-container>
+  
+    <!-- Death Column -->
+    <ng-container matColumnDef="deaths">
+      <mat-header-cell *matHeaderCellDef> Deaths </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.deaths}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    
+  </mat-table>
+  
+  <mat-paginator  [pageSizeOptions]="[10,15,20,25,30,40]" showFirstLastButtons></mat-paginator>
+  </div>

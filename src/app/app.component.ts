@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Dashboardservice } from './services/dashboardServices';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CovidProject';
+
 }
+
+

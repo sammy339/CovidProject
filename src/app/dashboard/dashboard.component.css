@@ -1,0 +1,17 @@
+.mat-card{
+    border-radius: 0;
+    border: 1px solid #ffff;
+}
+
+.text-confirm
+{
+    color:rgba(118,95,170)
+}
+.text-recover
+{
+    color:rgba(197,121,174)
+}
+.text-death
+{
+    color:rgba(10,198,243)
+}

@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    
+    <div class="row">
+        <mat-form-field class="ml-auto">
+            <mat-select matNativeControl [(value)]="selectedState"  (selectionChange)=selectState($event)>
+              <mat-option  *ngFor="let state of states" [value]="state"
+                     >{{ state }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+    
+    <div class="container mt-2">
+        <canvas #myCanvas
+        >{{ chart }}</canvas>
+    </div>
+</div>
